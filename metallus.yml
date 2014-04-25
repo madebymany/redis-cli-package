@@ -1,0 +1,13 @@
+software_groups: &software
+  - "base"
+
+jobs:
+  redis-cli:
+    builder: "make"
+    base: "ubuntu:12.04"
+    software_groups: *software
+    packages:
+      - name: redis-cli
+        target: install
+        repos:
+          - "mxm"
